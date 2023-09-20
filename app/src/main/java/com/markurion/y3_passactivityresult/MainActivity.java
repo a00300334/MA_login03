@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Submit(View view) {
-        String username = ((EditText)findViewById(R.id.editText_user)).getText().toString();
+        String username = ((EditText)findViewById(R.id.user_name_et)).getText().toString();
 
         //Or by doing this
-        EditText passwordEditText = findViewById(R.id.editText_pass);
+        EditText passwordEditText = findViewById(R.id.password_et);
         String password = passwordEditText.getText().toString();
 
         Intent intent = new Intent(this, LoginActivity.class);
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             if(resultCode == RESULT_OK){
                 Toast.makeText(this, "Login Correct", Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(this, "Incorecct Try Again!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Incorrect Try Again!", Toast.LENGTH_SHORT).show();
             }
         }
     }
